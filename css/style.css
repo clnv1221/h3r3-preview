@@ -1,0 +1,301 @@
+body {
+    margin: 0;
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    box-sizing: border-box;
+    padding-bottom: 92px;
+    display: flex;
+    flex-direction: column;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.site-header {
+    padding: 24px 40px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.main-nav {
+    display: flex;
+    gap: 32px;
+}
+
+.main-nav a {
+    font-size: 12px;
+    letter-spacing: 2px;
+    transition: color 0.3s ease;
+}
+
+.main-nav a:hover {
+    color: lightgray;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+.hero {
+    flex: 1;
+    position: relative;
+    padding: 0px 40px 0 51px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    filter: brightness(0.7);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.hero h1 {
+    margin: 24px 0 6px;
+    font-size: 120px;
+    line-height: 1;
+}
+
+.hero-label {
+    margin: 0;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+.artist-name {
+    margin: 0 0 24px;
+    font-size: 40px;
+    letter-spacing: 3px;
+}
+
+.artist-role {
+    margin: 0;
+    font-size: 14px;
+    letter-spacing: 1px;
+    color: white;
+}
+
+.hero-top-space {
+    flex: 1;
+}
+
+.release-area {
+    flex: 1;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+}
+
+.latest-release {
+    margin: 0;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-decoration: underline;
+    font-style: italic;
+}
+
+.latest-release a {
+    transition: color 0.3s ease;
+}
+
+.latest-release a:hover {
+    color: lightgray;
+}
+
+.about {
+    padding: 60px 51px;
+}
+
+.about h1 {
+    margin: 0 0 40px;
+    font-size: 64px;
+    line-height: 1;
+}
+
+.about-intro {
+    display: flex;
+    align-items: flex-start;
+    gap: 60px;
+}
+
+.about-details {
+    max-width: 700px;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.about-details p {
+    margin: 0 0 24px;
+}
+
+.about-text h2 {
+    margin: 24px 0 8px;
+    font-size: 32px;
+}
+
+.about-name {
+    margin: 0 0 16px;
+    font-size: 24px;
+}
+
+.about-role {
+    margin: 0;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+.about-listen {
+    display: inline-block;
+    margin-top: 50px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+    color: #999999;
+}
+
+.about-listen:hover {
+    color: white;
+}
+
+.about-details h2 {
+    margin: 0 0 24px;
+    font-size: 28px;
+    line-height: 1.2;
+    letter-spacing: 2px;
+}
+
+.timeline {
+    margin-top: 60px;
+}
+
+.timeline-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+    padding: 24px 0;
+    border-top: 1px solid #333333;
+}
+
+.timeline .timeline-date {
+    margin: 0;
+    width: 60px;
+    flex-shrink: 0;
+    font-size: 12px;
+}
+
+.timeline-event h4 {
+    margin: 0 0 8px;
+    font-size: 18px;
+}
+
+.timeline-event p {
+    margin: 0;
+}
+
+.about-page .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    background-color: black;
+}
+
+@media (min-width: 1000px) and (min-height: 800px) {
+    .about-profile {
+        position: fixed;
+        top: 152px;
+        left: 51px;
+        width: 400px;
+    }
+
+    .about-details {
+        margin-left: 460px;
+    }
+}
+
+@media (min-width: 1500px) and (min-height: 800px) {
+    .about-details {
+        flex: 1;
+        margin-left: 620px;
+        max-width: 800px;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 999px) and (min-height: 800px) {
+    .about-profile {
+        position: fixed;
+        top: 152px;
+        left: 51px;
+        width: 30%;
+    }
+
+    .about-profile .about-photo {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .about-details {
+        margin-left: 40%;
+    }
+
+    .about h1 {
+        font-size: 48px;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero h1 {
+        font-size: 64px;
+    }
+
+    .site-header {
+        padding: 20px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .main-nav {
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+
+    .hero {
+        padding: 0px 20px 0 31px;
+    }
+    
+    .about {
+        padding: 40px 31px;
+    }
+
+    .about-intro {
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    .about-photo {
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+}
