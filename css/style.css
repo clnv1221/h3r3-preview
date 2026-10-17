@@ -1,3 +1,7 @@
+html {
+    overscroll-behavior-y: none;
+}
+
 body {
     margin: 0;
     background-color: black;
@@ -218,7 +222,7 @@ main {
     background-color: black;
 }
 
-@media (min-width: 1000px) and (min-height: 800px) {
+@media (min-width: 1000px) {
     .about-profile {
         position: fixed;
         top: 152px;
@@ -231,7 +235,7 @@ main {
     }
 }
 
-@media (min-width: 1500px) and (min-height: 800px) {
+@media (min-width: 1500px) {
     .about-details {
         flex: 1;
         margin-left: 620px;
@@ -239,7 +243,7 @@ main {
     }
 }
 
-@media (min-width: 601px) and (max-width: 999px) and (min-height: 800px) {
+@media (min-width: 601px) and (max-width: 999px) {
     .about-profile {
         position: fixed;
         top: 152px;
@@ -532,7 +536,7 @@ main {
     border-bottom: 1px solid #333333;
 }
 
-@media (min-width: 1000px) and (min-height: 800px) {
+@media (min-width: 1000px) {
     .album-page .site-header {
         position: sticky;
         top: 0;
@@ -630,7 +634,7 @@ main {
     }
 }
 
-@media (min-width: 1000px) and (max-width: 1399px) and (min-height: 800px) {
+@media (min-width: 1000px) and (max-width: 1399px) {
     .album-introduction {
         margin-left: 460px;
     }
@@ -718,4 +722,86 @@ main {
 .live-detail-page .track-list {
     padding-left: 0;
     list-style-position: inside;
+}
+
+/* Medium-width album pages retain the two-column fixed profile. */
+@media (min-width: 601px) and (max-width: 999px) {
+    .album-page:not(.live-detail-page) .site-header {
+        position: sticky;
+        top: 0;
+        z-index: 2;
+        background-color: black;
+    }
+
+    .album-page:not(.live-detail-page) .album-profile {
+        position: fixed;
+        top: 152px;
+        left: 51px;
+        width: 30vw;
+    }
+
+    .album-page:not(.live-detail-page) .album-detail {
+        flex-direction: row;
+    }
+
+    .album-page:not(.live-detail-page) .album-tracks {
+        width: auto;
+        min-width: 0;
+        margin-left: calc(30vw + 60px);
+    }
+
+    .album-page:not(.live-detail-page) .album-introduction {
+        margin-left: calc(30vw + 60px);
+    }
+}
+
+/* Only short windows use compact profiles; tall windows keep the original. */
+@media (min-width: 601px) and (max-height: 799px) {
+    .about-profile,
+    .album-page:not(.live-detail-page) .album-profile {
+        top: 116px;
+    }
+
+    .about h1 {
+        font-size: 48px;
+        margin-bottom: 20px;
+    }
+
+    .about-profile .about-photo {
+        width: min(100%, max(100px, calc(100vh - 340px)));
+        height: auto;
+        display: block;
+    }
+
+    .about-text h2 {
+        font-size: 28px;
+        margin: 14px 0 6px;
+    }
+
+    .about-name {
+        font-size: 20px;
+        margin-bottom: 6px;
+    }
+
+    .about-role {
+        font-size: 11px;
+    }
+
+    .about-listen {
+        margin-top: 18px;
+    }
+
+    .album-page:not(.live-detail-page) .album-profile > img {
+        width: min(100%, max(100px, calc(100vh - 270px)));
+        max-width: 100%;
+        height: auto;
+    }
+
+    .album-page:not(.live-detail-page) .album-heading {
+        margin-top: 16px;
+    }
+
+    .album-page:not(.live-detail-page) .release-back {
+        margin-top: 16px;
+    }
 }
