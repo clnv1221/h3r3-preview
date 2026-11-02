@@ -101,6 +101,52 @@
     outline-offset: 4px;
 }
 
+@media (min-width: 901px) {
+    .documentary {
+        width: calc(1920 * var(--site-unit));
+        box-sizing: border-box;
+        margin: 0 auto;
+        padding: calc(40 * var(--site-unit)) calc(51 * var(--site-unit)) 0;
+    }
+
+    .documentary h1 {
+        font-size: calc(48 * var(--site-unit));
+        margin-bottom: calc(32 * var(--site-unit));
+    }
+
+    .documentary-description {
+        margin-top: calc(28 * var(--site-unit));
+    }
+
+    .documentary-description h2 {
+        font-size: calc(30 * var(--site-unit));
+    }
+
+    .documentary-description p {
+        font-size: clamp(12px, calc(16 * var(--site-unit)), 16px);
+    }
+
+    .documentary-episodes h2 {
+        font-size: calc(28 * var(--site-unit));
+        margin-bottom: calc(32 * var(--site-unit));
+    }
+
+    .episode-link {
+        gap: calc(16 * var(--site-unit));
+        padding: calc(16 * var(--site-unit)) 0 calc(28 * var(--site-unit));
+    }
+
+    .episode-number,
+    .episode-title {
+        font-size: calc(20 * var(--site-unit));
+    }
+
+    .episode-duration {
+        font-size: clamp(12px, calc(14 * var(--site-unit)), 14px);
+        margin-top: calc(10 * var(--site-unit));
+    }
+}
+
 @media (max-width: 900px) {
     .documentary {
         padding: 32px 31px 0;

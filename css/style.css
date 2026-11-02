@@ -636,75 +636,6 @@ main {
     list-style-position: inside;
 }
 
-@media (max-width: 1399px), (max-height: 799px) {
-    .about-profile,
-    .record-detail-page .album-profile {
-        top: 122px;
-        width: 320px;
-    }
-
-    .about-profile .about-photo,
-    .record-detail-page .album-profile img {
-        width: 100%;
-        height: auto;
-    }
-
-    .about h1 {
-        font-size: 51px;
-        margin-bottom: 32px;
-    }
-
-    .about-text h2 {
-        font-size: 26px;
-        margin: 19px 0 6px;
-    }
-
-    .about-name {
-        font-size: 19px;
-        margin-bottom: 13px;
-    }
-
-    .about-role,
-    .about-listen,
-    .record-detail-page .album-heading p {
-        font-size: 12px;
-    }
-
-    .about-listen {
-        margin-top: 40px;
-    }
-
-    .record-detail-page .album-heading {
-        margin-top: 19px;
-    }
-
-    .record-detail-page .album-heading h1 {
-        font-size: 26px;
-    }
-
-    .record-detail-page .release-back {
-        margin-top: 19px;
-    }
-
-    .about-details,
-    .record-detail-page .album-tracks,
-    .record-detail-page .album-introduction {
-        margin-left: 380px;
-        min-width: 0;
-        overflow-wrap: break-word;
-    }
-
-    .record-detail-page .album-detail {
-        flex-wrap: wrap;
-    }
-
-    .record-detail-page .album-introduction {
-        flex: auto;
-        width: 100%;
-        max-width: 650px;
-    }
-}
-
 @media (max-width: 600px) {
     .about h1 {
         font-size: 48px;
@@ -812,52 +743,6 @@ main {
     }
 }
 
-@media (min-width: 601px) and (max-height: 699px) {
-    .about-profile,
-    .record-detail-page .album-profile {
-        top: 92px;
-        width: 240px;
-    }
-
-    .about h1 {
-        font-size: 38px;
-        margin-bottom: 24px;
-    }
-
-    .about-text h2 {
-        font-size: 19px;
-        margin: 14px 0 5px;
-    }
-
-    .about-name {
-        font-size: 18px;
-        margin-bottom: 10px;
-    }
-
-    .about-listen {
-        margin-top: 30px;
-    }
-
-    .record-detail-page .album-heading {
-        margin-top: 14px;
-    }
-
-    .record-detail-page .album-heading h1 {
-        font-size: 19px;
-    }
-
-    .record-detail-page .release-back {
-        margin-top: 14px;
-    }
-
-    .about-details,
-    .record-detail-page .album-tracks,
-    .record-detail-page .album-introduction {
-        margin-left: 300px;
-    }
-
-}
-
 @media (max-width: 800px) {
     .live-detail-page {
         --live-unit: 1px;
@@ -882,5 +767,288 @@ main {
 
     .live-detail-page .live-mv-player {
         max-width: 100%;
+    }
+}
+
+body {
+    --site-unit: min(1px, calc(100vw / 1920));
+}
+
+.music {
+    padding: calc(60 * var(--site-unit)) calc(51 * var(--site-unit));
+}
+
+.music h1 {
+    font-size: calc(64 * var(--site-unit));
+    margin-bottom: calc(40 * var(--site-unit));
+}
+
+.music-nav {
+    gap: calc(32 * var(--site-unit));
+}
+
+.album-list {
+    gap: calc(40 * var(--site-unit));
+    margin-top: calc(40 * var(--site-unit));
+}
+
+.album {
+    width: calc(300 * var(--site-unit));
+}
+
+.album h2 {
+    font-size: clamp(16px, calc(24 * var(--site-unit)), 24px);
+    margin-top: calc(20 * var(--site-unit));
+}
+
+.release-section-title {
+    margin-top: calc(60 * var(--site-unit));
+    font-size: clamp(16px, calc(20 * var(--site-unit)), 20px);
+}
+
+.live-collection {
+    padding: 0 calc(51 * var(--site-unit));
+}
+
+.live-collection + .live-collection {
+    margin-top: calc(80 * var(--site-unit));
+}
+
+.live-collection > h2 {
+    font-size: clamp(20px, calc(28 * var(--site-unit)), 28px);
+}
+
+.hero {
+    --hero-unit: min(1px, calc(100vw / 1920), calc((100vh - 92px) / 800));
+    padding-left: calc(51 * var(--hero-unit));
+    padding-right: calc(40 * var(--hero-unit));
+}
+
+.hero h1 {
+    font-size: calc(120 * var(--hero-unit));
+    margin: calc(24 * var(--hero-unit)) 0 calc(6 * var(--hero-unit));
+}
+
+.artist-name {
+    font-size: calc(40 * var(--hero-unit));
+    margin-bottom: calc(24 * var(--hero-unit));
+}
+
+.artist-role {
+    font-size: clamp(12px, calc(14 * var(--hero-unit)), 14px);
+}
+
+.live-hero h1 {
+    font-size: clamp(80px, calc(200 * var(--site-unit)), 200px);
+    letter-spacing: calc(12 * var(--site-unit));
+}
+
+@media (min-width: 1001px) {
+    .about-page {
+        --profile-unit: min(var(--site-unit), calc((100vh - 92px) / 830));
+    }
+
+    .record-detail-page {
+        --profile-unit: min(var(--site-unit), calc((100vh - 92px) / 700));
+    }
+
+    .about,
+    .record-detail-page .album-detail {
+        width: calc(1920 * var(--profile-unit));
+        box-sizing: border-box;
+        margin: 0 auto;
+        padding: calc(60 * var(--profile-unit)) calc(51 * var(--profile-unit));
+        gap: calc(60 * var(--profile-unit));
+    }
+
+    .about-intro {
+        gap: calc(60 * var(--profile-unit));
+    }
+
+    .about-profile,
+    .record-detail-page .album-profile {
+        position: fixed;
+        top: calc(92px + 60 * var(--profile-unit));
+        left: calc((100vw - 1920 * var(--profile-unit)) / 2 + 51 * var(--profile-unit));
+        width: calc(400 * var(--profile-unit));
+    }
+
+    .about-photo,
+    .record-detail-page .album-profile img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .about h1 {
+        font-size: calc(64 * var(--profile-unit));
+        margin-bottom: calc(40 * var(--profile-unit));
+    }
+
+    .about-text h2 {
+        font-size: calc(32 * var(--profile-unit));
+        margin: calc(24 * var(--profile-unit)) 0 calc(8 * var(--profile-unit));
+    }
+
+    .about-name {
+        font-size: calc(24 * var(--profile-unit));
+        margin-bottom: calc(16 * var(--profile-unit));
+    }
+
+    .about-role,
+    .about-listen,
+    .record-detail-page .release-back,
+    .record-detail-page .album-heading p {
+        font-size: 12px;
+    }
+
+    .about-listen {
+        margin-top: calc(50 * var(--profile-unit));
+    }
+
+    .about-details {
+        flex: none;
+        width: calc(800 * var(--profile-unit));
+        max-width: none;
+        margin-left: calc(620 * var(--profile-unit));
+        font-size: clamp(12px, calc(16 * var(--profile-unit)), 16px);
+    }
+
+    .about-details h2,
+    .record-detail-page .album-tracks h2,
+    .record-detail-page .album-introduction h2 {
+        font-size: calc(28 * var(--profile-unit));
+        margin-bottom: calc(24 * var(--profile-unit));
+    }
+
+    .about-details p {
+        margin-bottom: calc(24 * var(--profile-unit));
+    }
+
+    .timeline {
+        margin-top: calc(60 * var(--profile-unit));
+    }
+
+    .timeline-item {
+        gap: calc(24 * var(--profile-unit));
+        padding: calc(24 * var(--profile-unit)) 0;
+    }
+
+    .timeline-event h4 {
+        font-size: clamp(14px, calc(18 * var(--profile-unit)), 18px);
+    }
+
+    .record-detail-page .album-detail {
+        flex-wrap: nowrap;
+        font-size: clamp(12px, calc(16 * var(--profile-unit)), 16px);
+    }
+
+    .record-detail-page .album-heading {
+        gap: calc(12 * var(--profile-unit));
+        margin-top: calc(24 * var(--profile-unit));
+    }
+
+    .record-detail-page .album-heading h1 {
+        font-size: calc(32 * var(--profile-unit));
+    }
+
+    .record-detail-page .release-back {
+        margin-top: calc(24 * var(--profile-unit));
+    }
+
+    .record-detail-page .album-tracks {
+        flex: none;
+        width: calc(500 * var(--profile-unit));
+        max-width: none;
+        margin-left: calc(460 * var(--profile-unit));
+    }
+
+    .record-detail-page .album-tracks h3,
+    .record-detail-page .album-introduction h3 {
+        font-size: clamp(12px, calc(16 * var(--profile-unit)), 16px);
+        margin: calc(32 * var(--profile-unit)) 0 calc(16 * var(--profile-unit));
+    }
+
+    .record-detail-page .track-list li {
+        padding: calc(16 * var(--profile-unit)) 0;
+    }
+
+    .record-detail-page .album-introduction {
+        max-width: calc(650 * var(--profile-unit));
+        font-size: clamp(12px, calc(15 * var(--profile-unit)), 15px);
+    }
+
+    .story-shop-one-page .album-introduction {
+        flex: 0 1 calc(400 * var(--profile-unit));
+        margin-left: calc(60 * var(--profile-unit));
+    }
+}
+
+@media (max-width: 1000px) {
+    .about,
+    .record-detail-page .album-detail {
+        padding: 40px 31px;
+    }
+
+    .about-intro,
+    .record-detail-page .album-detail {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .about-profile,
+    .record-detail-page .album-profile {
+        position: static;
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .about-photo,
+    .record-detail-page .album-profile img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .about-details,
+    .record-detail-page .album-tracks,
+    .record-detail-page .album-introduction {
+        margin-left: 0;
+        width: 100%;
+        min-width: 0;
+    }
+
+    .story-shop-one-page .album-introduction {
+        flex: auto;
+    }
+}
+
+@media (max-width: 600px) {
+    .music {
+        padding: 40px 31px;
+    }
+
+    .music h1 {
+        font-size: 40px;
+        margin-bottom: 32px;
+    }
+
+    .album-list {
+        gap: 24px;
+        margin-top: 32px;
+    }
+
+    .album {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .live-collection {
+        padding: 0 31px;
+    }
+
+    .hero {
+        --hero-unit: 0.6px;
+        padding: 0 31px;
     }
 }
