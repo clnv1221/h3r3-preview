@@ -3,19 +3,6 @@ html {
     overscroll-behavior-y: none;
 }
 
-body {
-    margin: 0;
-    background-color: black;
-    color: white;
-    font-family: Arial, sans-serif;
-    min-height: 100%;
-    height: 100%;
-    box-sizing: border-box;
-    padding-bottom: 92px;
-    display: flex;
-    flex-direction: column;
-}
-
 a {
     color: white;
     text-decoration: none;
@@ -49,16 +36,6 @@ main {
     flex-direction: column;
 }
 
-.hero {
-    flex: 1;
-    position: relative;
-    padding: 0px 40px 0 51px;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
 .hero-video {
     position: absolute;
     top: 0;
@@ -75,29 +52,10 @@ main {
     z-index: 1;
 }
 
-.hero h1 {
-    margin: 24px 0 6px;
-    font-size: 120px;
-    line-height: 1;
-}
-
 .hero-label {
     margin: 0;
     font-size: 12px;
     letter-spacing: 2px;
-}
-
-.artist-name {
-    margin: 0 0 24px;
-    font-size: 40px;
-    letter-spacing: 3px;
-}
-
-.artist-role {
-    margin: 0;
-    font-size: 14px;
-    letter-spacing: 1px;
-    color: white;
 }
 
 .hero-top-space {
@@ -142,11 +100,6 @@ main {
     display: flex;
     align-items: flex-start;
     gap: 60px;
-}
-
-.about-details {
-    font-size: 16px;
-    line-height: 1.8;
 }
 
 .about-details p {
@@ -229,22 +182,6 @@ main {
     background-color: black;
 }
 
-.music {
-    padding: 60px 51px;
-}
-
-.music h1 {
-    margin: 0 0 40px;
-    font-size: 64px;
-    line-height: 1;
-}
-
-.music-nav {
-    display: flex;
-    gap: 32px;
-    flex-wrap: wrap;
-}
-
 .music-nav a {
     font-size: 12px;
     letter-spacing: 2px;
@@ -257,19 +194,6 @@ main {
 
 .music-nav .active {
     text-decoration: underline;
-}
-
-.album-list {
-    display: flex;
-    gap: 40px;
-    margin-top: 40px;
-    flex-wrap: wrap;
-}
-
-.release-section-title {
-    margin: 60px 0 0;
-    font-size: 20px;
-    letter-spacing: 2px;
 }
 
 .releases-page .album-list {
@@ -317,46 +241,8 @@ main {
     z-index: 0;
 }
 
-.live-hero h1 {
-    position: relative;
-    z-index: 1;
-    margin: 0;
-    font-size: 200px;
-    letter-spacing: 12px;
-    text-align: center;
-}
-
-.live-collection {
-    padding: 0 51px;
-}
-
-.live-collection + .live-collection {
-    margin-top: 80px;
-}
-
-.live-collection > h2 {
-    margin: 0;
-    font-size: 28px;
-    letter-spacing: 2px;
-}
-
 .live-collection .album-list {
     justify-content: center;
-}
-
-.live-detail-page .album-detail {
-    flex-wrap: nowrap;
-}
-
-.live-detail-page .album-profile {
-    position: static;
-}
-
-.live-detail-page .album-tracks {
-    flex: none;
-    width: 100%;
-    max-width: none;
-    margin: 40px 0 0;
 }
 
 .live-mv {
@@ -370,16 +256,6 @@ main {
     aspect-ratio: 16 / 9;
     object-fit: contain;
     background-color: #000000;
-}
-
-.album {
-    width: 300px;
-    max-width: 100%;
-}
-
-.album h2 {
-    margin: 20px 0 8px;
-    font-size: 24px;
 }
 
 .album p {
@@ -417,16 +293,6 @@ main {
     align-items: flex-start;
     gap: 60px;
     padding: 60px 51px;
-}
-
-.album-profile {
-    width: 400px;
-    flex-shrink: 0;
-}
-
-.album-tracks {
-    flex: 1;
-    max-width: 500px;
 }
 
 .album-tracks h2 {
@@ -513,10 +379,6 @@ main {
     width: 400px;
 }
 
-.about-details {
-    margin-left: 460px;
-}
-
 .record-detail-page {
     height: auto;
 }
@@ -529,12 +391,16 @@ main {
 }
 
 .album-profile {
+    width: 400px;
+    flex-shrink: 0;
     position: fixed;
     top: 152px;
     left: 51px;
 }
 
 .album-tracks {
+    flex: 1;
+    max-width: 500px;
     margin-left: 460px;
 }
 
@@ -553,6 +419,7 @@ main {
 }
 
 .live-detail-page .album-detail {
+    flex-wrap: nowrap;
     flex: none;
     min-height: 0;
     width: calc(1920 * var(--live-unit));
@@ -589,12 +456,11 @@ main {
 }
 
 .live-detail-page .album-tracks {
+    flex: none;
+    width: 100%;
+    max-width: none;
+    margin: 40px 0 0;
     margin-top: calc(40 * var(--live-unit));
-}
-
-.live-detail-page .album-tracks h2 {
-    font-size: calc(28 * var(--live-unit));
-    margin-bottom: calc(12 * var(--live-unit));
 }
 
 .live-detail-page .track-list li {
@@ -612,6 +478,8 @@ main {
 }
 
 .live-detail-page .album-tracks h2 {
+    font-size: calc(28 * var(--live-unit));
+    margin-bottom: calc(12 * var(--live-unit));
     letter-spacing: calc(2 * var(--live-unit));
 }
 
@@ -626,6 +494,8 @@ main {
 }
 
 .about-details {
+    font-size: 16px;
+    line-height: 1.8;
     flex: 1;
     margin-left: 620px;
     max-width: 800px;
@@ -771,6 +641,16 @@ main {
 }
 
 body {
+    margin: 0;
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+    min-height: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding-bottom: 92px;
+    display: flex;
+    flex-direction: column;
     --site-unit: min(1px, calc(100vw / 1920));
 }
 
@@ -779,29 +659,39 @@ body {
 }
 
 .music h1 {
+    margin: 0 0 40px;
+    line-height: 1;
     font-size: calc(64 * var(--site-unit));
     margin-bottom: calc(40 * var(--site-unit));
 }
 
 .music-nav {
+    display: flex;
+    flex-wrap: wrap;
     gap: calc(32 * var(--site-unit));
 }
 
 .album-list {
+    display: flex;
+    flex-wrap: wrap;
     gap: calc(40 * var(--site-unit));
     margin-top: calc(40 * var(--site-unit));
 }
 
 .album {
+    max-width: 100%;
     width: calc(300 * var(--site-unit));
 }
 
 .album h2 {
+    margin: 20px 0 8px;
     font-size: clamp(16px, calc(24 * var(--site-unit)), 24px);
     margin-top: calc(20 * var(--site-unit));
 }
 
 .release-section-title {
+    margin: 60px 0 0;
+    letter-spacing: 2px;
     margin-top: calc(60 * var(--site-unit));
     font-size: clamp(16px, calc(20 * var(--site-unit)), 20px);
 }
@@ -815,30 +705,49 @@ body {
 }
 
 .live-collection > h2 {
+    margin: 0;
+    letter-spacing: 2px;
     font-size: clamp(20px, calc(28 * var(--site-unit)), 28px);
 }
 
 .hero {
+    flex: 1;
+    position: relative;
+    padding: 0px 40px 0 51px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     --hero-unit: min(1px, calc(100vw / 1920), calc((100vh - 92px) / 800));
     padding-left: calc(51 * var(--hero-unit));
     padding-right: calc(40 * var(--hero-unit));
 }
 
 .hero h1 {
+    line-height: 1;
     font-size: calc(120 * var(--hero-unit));
     margin: calc(24 * var(--hero-unit)) 0 calc(6 * var(--hero-unit));
 }
 
 .artist-name {
+    margin: 0 0 24px;
+    letter-spacing: 3px;
     font-size: calc(40 * var(--hero-unit));
     margin-bottom: calc(24 * var(--hero-unit));
 }
 
 .artist-role {
+    margin: 0;
+    letter-spacing: 1px;
+    color: white;
     font-size: clamp(12px, calc(14 * var(--hero-unit)), 14px);
 }
 
 .live-hero h1 {
+    position: relative;
+    z-index: 1;
+    margin: 0;
+    text-align: center;
     font-size: clamp(80px, calc(200 * var(--site-unit)), 200px);
     letter-spacing: calc(12 * var(--site-unit));
 }
