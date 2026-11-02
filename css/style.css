@@ -911,7 +911,7 @@ body {
         width: calc(800 * var(--profile-unit));
         max-width: none;
         margin-left: calc(620 * var(--profile-unit));
-        font-size: clamp(12px, calc(16 * var(--profile-unit)), 16px);
+        font-size: 16px;
     }
 
     .about-details h2,
@@ -934,8 +934,12 @@ body {
         padding: calc(24 * var(--profile-unit)) 0;
     }
 
+    .about-details h2 {
+        font-size: 28px;
+    }
+
     .timeline-event h4 {
-        font-size: clamp(14px, calc(18 * var(--profile-unit)), 18px);
+        font-size: 18px;
     }
 
     .record-detail-page .album-detail {
