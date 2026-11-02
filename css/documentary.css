@@ -1,0 +1,141 @@
+.documentary-page {
+    height: auto;
+    padding-bottom: 60px;
+}
+
+.documentary {
+    display: block;
+    padding: 40px 51px 0;
+}
+
+.documentary h1 {
+    margin: 0 0 32px;
+    font-size: 48px;
+    line-height: 1.1;
+}
+
+.documentary-layout {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.documentary-film {
+    width: 72%;
+    min-width: 0;
+}
+
+.documentary-film video {
+    display: block;
+    width: 100%;
+    height: auto;
+    background-color: #111111;
+}
+
+.documentary-description {
+    margin-top: 28px;
+}
+
+.documentary-kicker {
+    color: #999999;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+.documentary-description h2 {
+    margin: 10px 0 14px;
+    font-size: 30px;
+}
+
+.documentary-description p {
+    margin: 0;
+    line-height: 1.8;
+    color: #aaaaaa;
+}
+
+.documentary-episodes {
+    width: 24%;
+}
+
+.documentary-episodes h2 {
+    margin: 0 0 32px;
+    font-size: 28px;
+    letter-spacing: 1px;
+}
+
+.episode-link {
+    display: flex;
+    gap: 16px;
+    padding: 16px 0 28px;
+    line-height: 1.4;
+}
+
+.episode-number {
+    color: #888888;
+    font-size: 20px;
+}
+
+.episode-label {
+    min-width: 0;
+}
+
+.episode-title {
+    font-size: 20px;
+}
+
+.episode-duration {
+    display: block;
+    margin-top: 10px;
+    color: #999999;
+    font-size: 14px;
+}
+
+.episode-link.current .episode-title,
+.episode-link:hover .episode-title {
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
+
+.episode-link:focus-visible {
+    outline: 1px solid white;
+    outline-offset: 4px;
+}
+
+@media (max-width: 900px) {
+    .documentary {
+        padding: 32px 31px 0;
+    }
+
+    .documentary h1 {
+        font-size: 36px;
+    }
+
+    .documentary-layout {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .documentary-film,
+    .documentary-episodes {
+        width: 100%;
+    }
+
+    .documentary-episodes h2 {
+        font-size: 24px;
+        margin-bottom: 16px;
+    }
+
+    .episode-link {
+        padding: 16px 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .documentary h1 {
+        font-size: 30px;
+    }
+
+    .documentary-description h2 {
+        font-size: 26px;
+    }
+}
