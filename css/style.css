@@ -489,113 +489,6 @@ main {
     list-style-position: inside;
 }
 
-@media (max-width: 600px) {
-    .about h1 {
-        font-size: 48px;
-        margin-bottom: 40px;
-    }
-
-    .about-text h2,
-    .record-detail-page .album-heading h1 {
-        font-size: 32px;
-    }
-
-    .about-text h2 {
-        margin: 24px 0 8px;
-    }
-
-    .about-name {
-        font-size: 24px;
-        margin-bottom: 16px;
-    }
-
-    .about-listen {
-        margin-top: 50px;
-    }
-
-    .record-detail-page .album-heading,
-    .record-detail-page .release-back {
-        margin-top: 24px;
-    }
-
-    .site-header {
-        padding: 20px;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 20px;
-    }
-
-    .main-nav {
-        gap: 20px;
-        flex-wrap: wrap;
-    }
-
-    .hero h1 {
-        font-size: 64px;
-    }
-
-    .hero {
-        padding: 0 20px 0 31px;
-    }
-
-    .about,
-    .album-detail,
-    .live-detail-page .album-detail {
-        padding: 40px 31px;
-    }
-
-    .about-intro,
-    .album-detail,
-    .live-detail-page .album-detail {
-        flex-direction: column;
-    }
-
-    .about-intro {
-        gap: 32px;
-    }
-
-    .about-profile,
-    .record-detail-page .album-profile,
-    .live-detail-page .album-profile {
-        position: static;
-        width: 100%;
-        max-width: 500px;
-    }
-
-    .about-profile .about-photo,
-    .album-profile img {
-        display: block;
-        max-width: 100%;
-        height: auto;
-    }
-
-    .about-details,
-    .record-detail-page .album-tracks,
-    .record-detail-page .album-introduction,
-    .album-tracks {
-        margin-left: 0;
-    }
-
-    .album-tracks,
-    .live-mv {
-        width: 100%;
-    }
-
-    .live-detail-page {
-        height: auto;
-        padding-bottom: 92px;
-    }
-
-    .live-hero h1 {
-        font-size: 80px;
-        letter-spacing: 6px;
-    }
-
-    .live-collection {
-        padding: 0 31px;
-    }
-}
-
 @media (max-width: 800px) {
     .live-detail-page {
         --live-unit: 1px;
@@ -800,7 +693,6 @@ body {
         font-size: 16px;
     }
 
-    .about-details h2,
     .record-detail-page .album-tracks h2,
     .record-detail-page .album-introduction h2 {
         font-size: calc(28 * var(--profile-unit));
@@ -821,7 +713,7 @@ body {
     }
 
     .about-details h2 {
-        font-size: 28px;
+        margin-bottom: calc(24 * var(--profile-unit));
     }
 
     .timeline-event h4 {
@@ -914,6 +806,38 @@ body {
 }
 
 @media (max-width: 600px) {
+    .about h1 {
+        font-size: 48px;
+    }
+
+    .site-header {
+        padding: 20px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .main-nav {
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .about-profile .about-photo,
+    .album-profile img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .album-tracks {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .live-detail-page {
+        padding-bottom: 92px;
+    }
+
     .music {
         padding: 40px 31px;
     }
