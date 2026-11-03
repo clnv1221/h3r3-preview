@@ -23,11 +23,6 @@ a {
 .main-nav a {
     font-size: 12px;
     letter-spacing: 2px;
-    transition: color 0.3s ease;
-}
-
-.main-nav a:hover {
-    color: lightgray;
 }
 
 main {
@@ -36,7 +31,8 @@ main {
     flex-direction: column;
 }
 
-.hero-video {
+.hero-video,
+.live-video {
     position: absolute;
     top: 0;
     left: 0;
@@ -78,10 +74,14 @@ main {
     font-style: italic;
 }
 
+.main-nav a,
+.music-nav a,
 .latest-release a {
     transition: color 0.3s ease;
 }
 
+.main-nav a:hover,
+.music-nav a:hover,
 .latest-release a:hover {
     color: lightgray;
 }
@@ -185,11 +185,6 @@ main {
 .music-nav a {
     font-size: 12px;
     letter-spacing: 2px;
-    transition: color 0.3s ease;
-}
-
-.music-nav a:hover {
-    color: lightgray;
 }
 
 .music-nav .active {
@@ -228,17 +223,6 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.live-video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    filter: brightness(0.7);
-    z-index: 0;
 }
 
 .live-collection .album-list {
@@ -459,8 +443,7 @@ main {
     flex: none;
     width: 100%;
     max-width: none;
-    margin: 40px 0 0;
-    margin-top: calc(40 * var(--live-unit));
+    margin: calc(40 * var(--live-unit)) 0 0;
 }
 
 .live-detail-page .track-list li {
@@ -659,10 +642,9 @@ body {
 }
 
 .music h1 {
-    margin: 0 0 40px;
+    margin: 0 0 calc(40 * var(--site-unit));
     line-height: 1;
     font-size: calc(64 * var(--site-unit));
-    margin-bottom: calc(40 * var(--site-unit));
 }
 
 .music-nav {
@@ -684,15 +666,13 @@ body {
 }
 
 .album h2 {
-    margin: 20px 0 8px;
+    margin: calc(20 * var(--site-unit)) 0 8px;
     font-size: clamp(16px, calc(24 * var(--site-unit)), 24px);
-    margin-top: calc(20 * var(--site-unit));
 }
 
 .release-section-title {
-    margin: 60px 0 0;
+    margin: calc(60 * var(--site-unit)) 0 0;
     letter-spacing: 2px;
-    margin-top: calc(60 * var(--site-unit));
     font-size: clamp(16px, calc(20 * var(--site-unit)), 20px);
 }
 
@@ -713,14 +693,12 @@ body {
 .hero {
     flex: 1;
     position: relative;
-    padding: 0px 40px 0 51px;
+    padding: 0 calc(40 * var(--hero-unit)) 0 calc(51 * var(--hero-unit));
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     justify-content: center;
     --hero-unit: min(1px, calc(100vw / 1920), calc((100vh - 92px) / 800));
-    padding-left: calc(51 * var(--hero-unit));
-    padding-right: calc(40 * var(--hero-unit));
 }
 
 .hero h1 {
@@ -730,10 +708,9 @@ body {
 }
 
 .artist-name {
-    margin: 0 0 24px;
+    margin: 0 0 calc(24 * var(--hero-unit));
     letter-spacing: 3px;
     font-size: calc(40 * var(--hero-unit));
-    margin-bottom: calc(24 * var(--hero-unit));
 }
 
 .artist-role {
